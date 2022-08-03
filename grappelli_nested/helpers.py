@@ -1,6 +1,7 @@
-from django.contrib.admin.helpers import (AdminErrorList as ParentErrorList,
-                                            InlineAdminFormSet)
-from django.utils import six
+from django.contrib.admin.helpers import (
+    AdminErrorList as ParentErrorList,
+    InlineAdminFormSet,
+)
 
 class AdminErrorList(ParentErrorList):
     """
@@ -21,7 +22,7 @@ class AdminErrorList(ParentErrorList):
 
         self.extend(formset.non_form_errors())
         for errors_in_inline_form in formset.errors:
-            self.data.extend(list(six.itervalues(errors_in_inline_form)))
+            self.data.extend(list(errors_in_inline_form.values()))
 
         #support for nested formsets
         for form in formset:
