@@ -27,6 +27,10 @@ setup(
     download_url=f'{REPO_URL}archive/{PYPI_VERSION}.tar.gz',
     author='Allan James Vestal (based on code by Alain Trinh)',
     author_email='allanjamesvestal@gmail.com',
+    install_requires=[
+        'Django>=3.2',
+        'django-grappelli>=2.15',
+    ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
