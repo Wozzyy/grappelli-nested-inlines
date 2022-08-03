@@ -1,4 +1,4 @@
-{% load i18n admin_static grp_tags %}
+{% load i18n static grp_tags %}
 {% with recursive_formset=inline_admin_formset stacked_template='admin/grappelli_nested/edit_inline/stacked.html' tabular_template='admin/grappelli_nested/edit_inline/tabular.html'%}
 {% with recursive_formset.opts.sortable_field_name|default:"" as sortable_field_name %}
 
