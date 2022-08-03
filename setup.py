@@ -24,10 +24,7 @@ setup(
     description=DESCRIPTION,
     long_description=DESCRIPTION,
     url=REPO_URL,
-    download_url='{repo_url}archive/{version}.tar.gz'.format(**{
-        'repo_url': REPO_URL,
-        'version': PYPI_VERSION,
-    }),
+    download_url=f'{REPO_URL}archive/{PYPI_VERSION}.tar.gz',
     author='Allan James Vestal (based on code by Alain Trinh)',
     author_email='allanjamesvestal@gmail.com',
     classifiers=[
